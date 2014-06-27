@@ -88,7 +88,11 @@ def main(argv=None):
         
     args = docopt(__doc__, argv, version=stix2cif_version)
     try:
-        config_file = args.get('<config>')
+	if args.get('<config>') == None:
+		config_file = "stix2cif_config.cfg"
+	else:
+		config_file = args.get('<config>')
+
         cf = open(config_file, 'r')
     except IOError as err:
         print 'Cannot open configuration file: ' + str(err), sys.stderr
