@@ -87,12 +87,11 @@ Python module
 
 Python module
 -------------------
-STIX/Cybox document builder requires installation of:
--	Python-STIX (https://github.com/STIXProject/python-stix)
--	Python-CyBox (https://github.com/CybOXProject/python-cybox)
--	lxml (http://lxml.de/)
--	docopt (https://github.com/docopt/docopt)
--	ordereddict(https://pypi.python.org/pypi/ordereddict)
+
+TODO installation of CIF SMRT is also required, the config assumes `cif_home` is set to its directory
+
+To install python dependencies:
+`pip install -r requirements.txt`
 
 This module requires configuration file ? stix2cif_config.cfg. You can pass the 
 full path as input argument, or hard-code the path in the module.
