@@ -1,33 +1,11 @@
 
-== GENERAL INFORMATION ==
-
-Name: Stix2Cif
-Version: 1.0.0
-PL: Python2.6
-OS: RHEL 6
-
-
-== DESCRIPTION ==
-
 This is a plug-in for CIF that consists of a Python module. It parses 
 STIX/Cybox documents into JSON CIF Feed files with corresponding configuration
 files for each source document and feed it to CIF.
 
 
-== MAIN FUNCTIONALITY ==
 
-Python module
--------------------
--	Monitors drop-off directory for XML files
--	Parses STIX/CyBox documents and maps keys to CIF parameters 
--	Creates a separate JSON object for each Indicator
--	Builds a JSON Feed file and CIF Feed configuration file from each source
-	XML file
--	Allows to change configuration of CIF Feed 
--	Logs in activities
-== INSTUCTIONS ==
-
-Python module
+Installation
 -------------------
 
 To install CIF dependencies:
@@ -45,6 +23,8 @@ To install python dependencies:
 `pip install -r requirements.txt`
 
 
+Usage
+---------
 This module requires configuration file ? stix2cif_config.cfg. You can pass the 
 full path as input argument, or hard-code the path in the module.
 
@@ -60,10 +40,10 @@ The configuration file allows to set:
 - Stix2Cif logger configuration
 
 
-The Stix2Cif runs from command line.
+Stix2Cif is meant to be executed command line.
 
 Usage:
-  stix2cif [?c <cinfug>]
+  stix2cif [-c <config>]
   stix2cif [--version]
   stix2cif [-h | --help]
 
