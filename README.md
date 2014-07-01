@@ -88,10 +88,20 @@ Python module
 Python module
 -------------------
 
-TODO installation of CIF SMRT is also required, the config assumes `cif_home` is set to its directory
+To install CIF dependencies:
+```
+apt-get install automake libtool; 
+sudo cpan Google::ProtocolBuffers; 
+git clone https://github.com/collectiveintel/cif-v1.git;  
+cd cif-v1
+./rebuild.sh 
+sudo useradd cif; 
+./configure && make && sudo make install
+```
 
 To install python dependencies:
 `pip install -r requirements.txt`
+
 
 This module requires configuration file ? stix2cif_config.cfg. You can pass the 
 full path as input argument, or hard-code the path in the module.
