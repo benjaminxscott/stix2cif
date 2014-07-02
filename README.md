@@ -1,11 +1,8 @@
-
-STIX/Cybox documents into JSON CIF Feed files with corresponding configuration
-files for each source document and feed it to CIF.
-
+## Impetus
+This tool converts STIX XML documents to CIF JSON files.
 
 
-Installation
--------------------
+## Installation
 
 To install Python dependencies:
 `pip install -r requirements.txt`
@@ -29,7 +26,7 @@ Point your  `cif_home` variable in the config to where CIF lives (for instance ~
 ## Usage
 
 ```
-  stix2cif [-c <config>] [--version] [-h | --help]
+ python stix2cif [-c <config>] [--version] [-h | --help]
 
 Options:
   --version            Show version.
@@ -49,7 +46,8 @@ Variables that are safe to modify:
 - `cif_feed_config_file` = location of CIF configuration file
 - `run_dir` = dir for temp files
 
-
+Ingested STIX documents will be moved to a `stix_dir`/processed[$timestamp]/ folder
+Output CIF files will be sent to the server instance at `cif_home/bin/cif_smrt`
 
 ## Original Authors
 Nataliya A. Shevchenko, SEI CERT
