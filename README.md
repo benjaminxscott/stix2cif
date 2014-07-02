@@ -33,7 +33,6 @@ Options:
                            [default: 1.0.0]
   -h --help            Show this screen.
   -c			Configuration file to use
-			[default: ./stix2cif_config.cfg]
 ```
 
 Script configuration will be loaded by default from `stix2cif_config.cfg` 
@@ -46,7 +45,8 @@ Variables that are safe to modify:
 - `cif_feed_config_file` = location of CIF configuration file
 - `run_dir` = dir for temp files
 
-Ingested STIX documents will be moved to a `stix_dir`/processed[$timestamp]/ folder
+Ingested STIX documents will be moved to `stix_dir/processed[$timestamp]/` 
+
 Output CIF files will be sent to the server instance at `cif_home/bin/cif_smrt`
 
 ## Original Authors
